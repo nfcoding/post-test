@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "email": "user@email.com",
+      "password": "$2a$10$K6.yB5cujxVb6o2SGSVYdO2g6MeT9zt1MFYv6QjxBILXKC4WysZFu",
+      "id": 1
+    },
+    {
+      "email": "12345@gmail.com",
+      "password": "$2a$10$GeHeaG42pD/EEtTyoiXL4e7rS8jkT9fsg2uWrBsEJi1Z5l/jWgF.6",
+      "id": 2
+    },
+    {
+      "email": "bayu@gmail.com",
+      "password": "$2a$10$A53Vfy/w/PhKu73H6N2IWufw42VdwIdjvA4UJ9BJWMSgclP8Nzf9G",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "title": "naruto",
+      "author": "masashi kisimotos",
+      "id": 2
+    }
+  ],
+  "tasks": []
+}
