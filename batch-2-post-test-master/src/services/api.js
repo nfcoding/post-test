@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import userCookie from './userCookie'
+
 const config = {
   baseURL: 'http://127.0.0.1:3000/v1',
 }

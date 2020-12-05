@@ -14,7 +14,7 @@ function RegisterForm() {
   })
 
   return (
-    <Card title="Login Form">
+    <Card title="Register Form">
       <form onSubmit={handleSubmit(registerUserApi)}>
         <TextInput name="email" id="email" label="Email" refInput={register} error={errors.email && errors.email.message} />
         <PasswordInput name="password" id="password" label="Password" refInput={register} error={errors.email && errors.email.message} />

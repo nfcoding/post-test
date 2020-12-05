@@ -1,15 +1,12 @@
 import React from 'react'
 import CreatePostForm from '../components/Form/CreatePostForm'
+import CenterLayout from '../layouts/CenterLayout'
 
 function CreatePostScreen() {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-8">
-          <CreatePostForm />
-        </div>
-      </div>
-    </div>
+    <CenterLayout>
+      <CreatePostForm />
+    </CenterLayout>
   )
 }
 export default CreatePostScreen

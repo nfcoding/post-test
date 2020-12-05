@@ -1,6 +1,7 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import UpdatePostForm from '../components/Form/UpdatePostForm'
+import CenterLayout from '../layouts/CenterLayout'
 import { getPostByIdApi } from '../services/api'
 
 function UpdatePostScreen() {
@@ -16,9 +17,9 @@ function UpdatePostScreen() {
   }, [postId])
 
   return (
-    <Fragment>
+    <CenterLayout>
       { posts && <UpdatePostForm data={posts} />}
-    </Fragment>
+    </CenterLayout>
   )
 }
 

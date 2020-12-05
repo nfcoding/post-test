@@ -19,9 +19,13 @@
   "posts": [
     {
       "title": "naruto",
-      "author": "masashi kisimotos",
+      "author": "masashi kisimoto",
       "id": 2
+    },
+    {
+      "title": "Php Basic",
+      "author": "Ridwan Hanif",
+      "id": 3
     }
-  ],
-  "tasks": []
+  ]
 }

@@ -13,8 +13,9 @@ function PostList() {
 
   return (
 
-    <div className="container-fluid">
-      <div className="row">
+    <div className="container vh-100">
+      <h2 className="mt-2">Post List</h2>
+      <div className="row mt-5">
         <div className="col-md-8">
           {
             posts.length > 0 && posts.map((post) => (

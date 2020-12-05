@@ -1,11 +1,15 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { deletePostApi } from '../../services/api'
 
 function DeletePostButton(props) {
   const { postId } = props
+  const history = useHistory()
 
   function handleClick() {
-    deletePostApi(postId)
+    deletePostApi(postId).then(
+      () => history.push('/post-list'),
+    )
   }
 
   return (
