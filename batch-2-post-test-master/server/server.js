@@ -29,10 +29,11 @@ const rules = auth.rewriter({
   '/v1/register': '/register',
   '/v1/login': '/login',
   '/v1/reset': '/reset',
+  '/v1/upload': '/upload',
 })
 const [compression, cors, , logger, def] = middlewares
 
-server.get('/openapi.json', (req, res) => res.sendFile(path.join(__dirname, 'api', 'test.json')))
+server.get('/openapi.json', (req, res) => res.sendFile(path.join(__dirname, 'api', 'learn.json')))
 server.get('/auth.json', (req, res) => res.sendFile(path.join(__dirname, 'api', 'auth.json')))
 server.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')))
 
@@ -40,6 +41,18 @@ server.use([compression, cors, logger, def])
 server.use(rules)
 server.use(auth)
 // custom start
+
+server.post('/upload', (req, res) => {
+  console.log(req.body.name)
+  if (!req.files || Object.keys(req.files).length === 0) {
+    res.status(400).send('No files were upload')
+  }
+  const { avatar } = req.files
+  avatar.mv(path.join(__dirname, 'uploads', 'file.png'), (err) => {
+    if (err) return res.status(500).send(err)
+    res.send('File iploaded!')
+  })
+})
 
 server.get('/reset', (req, res) => {
   const { db } = server

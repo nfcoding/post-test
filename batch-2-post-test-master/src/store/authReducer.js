@@ -2,6 +2,7 @@ import Cookies from 'js-cookie'
 
 const initialState = {
   isLoggedIn: !!Cookies.get('token'),
+  // isLoggedIn: false,
 }
 
 function authReducer(state = initialState, action) {

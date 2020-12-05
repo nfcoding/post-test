@@ -1,7 +1,7 @@
 import React from 'react'
 import { joiResolver } from '@hookform/resolvers/joi'
 import { useForm } from 'react-hook-form'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import SubmitButton from '../Button/SubmitButton'
 import TextInput from '../Input/TextInput'
 import postValidation from '../../validations/postValidation'
@@ -17,9 +17,12 @@ function UpdatePostForm(props) {
     defaultValues: data,
     resolver: joiResolver(postValidation),
   })
+  const history = useHistory()
 
   function updatePost(dataForm) {
-    updatePostApi(postId, dataForm)
+    updatePostApi(postId, dataForm).then(
+      () => history.push('/post-list'),
+    )
   }
   return (
     <Card title="Update Post">
